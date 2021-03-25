@@ -34,7 +34,7 @@ def trainer(mode: ["classification", "regression"], cfg):
 
 if __name__ == "__main__":
     config = configparser.ConfigParser()
-    config.read("./config.ini")
+    config.read("/content/idao-21-baseline/config.ini")
 
     print(config)
     print(config.keys)
