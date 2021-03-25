@@ -33,7 +33,7 @@ class IDAODataset(DatasetFolder):
 
 class InferenceDataset(Dataset):
     def __init__(self, main_dir, transform, loader=None):
-        self.img_loaderj= img_loader
+        self.img_loader = img_loader
         self.main_dir = path.Path(main_dir)
         self.transform = transform
         self.all_imgs = list(self.main_dir.glob("*.png"))
