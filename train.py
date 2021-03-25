@@ -18,8 +18,7 @@ def trainer(mode: ["classification", "regression"], cfg):
     else:
         epochs = cfg["TRAINING"]["RegressionEpochs"]
     # Initialize a trainer
-    trainer = pl.Trainer(
-        gpus=int(cfg["TRAINING"]["NumGPUs"]),
+    trainer = pl.Trainer( gpus=int(cfg["TRAINING"]["NumGPUs"]),
         max_epochs=int(epochs),
         progress_bar_refresh_rate=20,
         weights_save_path=path.Path(cfg["TRAINING"]["ModelParamsSavePath"]).joinpath(
