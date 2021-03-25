@@ -36,6 +36,9 @@ if __name__ == "__main__":
     config = configparser.ConfigParser()
     config.read("./config.ini")
 
+    print(config)
+    print(config.keys)
+
     PATH = path.Path(config["DATA"]["DatasetPath"])
 
     dataset_dm = IDAODataModule(
